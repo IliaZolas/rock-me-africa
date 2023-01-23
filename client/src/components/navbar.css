@@ -1,0 +1,20 @@
+.navbar {
+    background-color: #030303;
+}
+
+
+.navitems{
+
+}
+
+.nav-item {
+
+}
+
+
+.item {
+    color: white;
+    text-decoration: none;
+    border: 1px red solid;
+    padding: 15px 25px;
+}

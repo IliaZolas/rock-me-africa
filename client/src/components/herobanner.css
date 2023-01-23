@@ -1,0 +1,32 @@
+.hero-banner {
+    display: flex;
+    background-color: #1b1d1d;
+    justify-content: space-around;
+    align-items: center;
+    height: 450px;
+
+}
+
+
+
+.hero-banner-left {
+
+}
+
+.hero-banner-overlay {
+    
+    
+}
+
+.hero-banner-logo {
+
+}
+
+.hero-banner-right {
+
+}
+
+.hero-headline {
+    color: white;
+
+}
