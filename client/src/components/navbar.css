@@ -1,5 +1,12 @@
 .navbar {
     background-color: #030303;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+.navbar-logo{
+    padding: 15px 25px ;
 }
 
 
@@ -8,13 +15,12 @@
 }
 
 .nav-item {
-
+    padding: 15px 25px; 
 }
 
 
 .item {
     color: white;
     text-decoration: none;
-    border: 1px red solid;
-    padding: 15px 25px;
 }
+
