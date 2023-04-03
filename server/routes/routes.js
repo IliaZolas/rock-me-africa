@@ -20,7 +20,7 @@ const client = new Twitter({
     ];
 
     // Define the route handler for GET /news
-    router.get('/', async (req, res) => {
+    router.get('/app/news', async (req, res) => {
         console.log("get route triggered")
         try {
             const latestTweets = [];
