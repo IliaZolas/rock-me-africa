@@ -7,7 +7,7 @@ const Card = () => {
 
     useEffect(() => {
         async function getTweets() {
-        const res = await axios.get('/app/news');
+        const res = await axios.get('http://localhost:4000/api');
         setTweets(res.data);
         console.log("tweets:",res.data);
         }

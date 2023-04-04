@@ -6,11 +6,14 @@ const Twitter = require('twitter');
 
 // Set up Twitter API client
 const client = new Twitter({
-    consumer_key: process.env.TWITTER_CONSUMER_KEY,
-    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+    consumer_key: `${process.env.TWITTER_CONSUMER_KEY}`,
+    consumer_secret: `${process.env.TWITTER_CONSUMER_SECRET}`,
+    access_token_key: `${process.env.TWITTER_ACCESS_TOKEN_KEY}`,
+    access_token_secret: `${process.env.TWITTER_ACCESS_TOKEN_SECRET}`
     });
+
+   
+
 
     // Define the list of bands and their Twitter usernames
     const bands = [
@@ -19,9 +22,13 @@ const client = new Twitter({
     // ...and so on for the remaining 18 bands
     ];
 
-    // Define the route handler for GET /news
-    router.get('/app/news', async (req, res) => {
+    // Define the route handler for GET /
+    router.get('/api', async (req, res) => {
         console.log("get route triggered")
+        console.log(`${process.env.TWITTER_CONSUMER_KEY}`);
+        console.log(process.env.TWITTER_CONSUMER_SECRET);
+        console.log(process.env.TWITTER_ACCESS_TOKEN_KEY);
+        console.log(process.env.TWITTER_ACCESS_TOKEN_SECRET);
         try {
             const latestTweets = [];
         
