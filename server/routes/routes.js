@@ -12,9 +12,6 @@ const client = new Twitter({
     access_token_secret: `${process.env.TWITTER_ACCESS_TOKEN_SECRET}`
     });
 
-   
-
-
     // Define the list of bands and their Twitter usernames
     const bands = [
     { name: 'OneDaySky', username: 'OneDaySky' },
