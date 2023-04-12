@@ -3,29 +3,28 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Card = () => {
-    const [tweets, setTweets] = useState([]);
+    const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        async function getTweets() {
-        const res = await axios.get('http://localhost:4000/api');
-        setTweets(res.data);
-        console.log("tweets:",res.data);
+        async function getPosts() {
+        const res = await axios.get('http://localhost:4000/instagram/posts');
+        setPosts(res.data.data); // assuming response from the server contains a 'data' property that contains the posts
+        console.log("posts:", res.data.data);
         }
-        getTweets();
+        getPosts();
     }, []);
-
 
     return (
         <div>
-        {tweets.map((tweet) => (
-            <div key={tweet.url}>
-                <img src={tweet.profileImage} alt="Band Profile" />
-                <h3>{tweet.name}</h3>
-                <p>{tweet.text}</p>
+        {posts.map((post) => (
+            <div key={post.id}>
+            <img src={post.media_url} alt="Instagram post" />
+            <h3>{post.username}</h3>
+            <p>{post.caption}</p>
             </div>
-            ))}
+        ))}
         </div>
     );
-    }
+}
 
 export default Card;
