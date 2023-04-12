@@ -1,7 +1,9 @@
+const { default: axios } = require('axios');
 const express = require('express')
 const router = express.Router()
+require('dotenv').config()
 
-const usernames = ['username1', 'username2', 'username3'];
+const usernames = ['rockmeafrica'];
 const accessToken = process.env.INSTAGRAM_BASIC_TOKEN
 const apiBaseUrl = "https://graph.instagram.com/v12.0";
 
@@ -15,10 +17,12 @@ router.get('/instagram/posts', async (req, res) => {
 
     // Return the Instagram data as the response
     res.send(response.data);
+    console.log("URL:",url)
   } catch (error) {
     console.error(error);
     res.status(500).send('An error occurred while retrieving Instagram data');
   }
+  console.log(accessToken)
 });
 
 module.exports = router
