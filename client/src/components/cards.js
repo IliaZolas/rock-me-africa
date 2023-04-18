@@ -1,30 +1,26 @@
+import React from 'react';
 import "./cards.css"
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 
-const Card = () => {
-    const [posts, setPosts] = useState([]);
-
-    useEffect(() => {
-        async function getPosts() {
-        const res = await axios.get('http://localhost:4000/instagram/posts');
-        setPosts(res.data.data); // assuming response from the server contains a 'data' property that contains the posts
-        console.log("posts:", res.data.data);
-        }
-        getPosts();
-    }, []);
-
+const Card = ({ date, user, tweet, tweetLink, imageUrl }) => {
     return (
-        <div>
-        {posts.map((post) => (
-            <div key={post.id}>
-            <img src={post.media_url} alt="Instagram post" />
-            <h3>{post.username}</h3>
-            <p>{post.caption}</p>
+        <div className="card">
+            <div className="card-title">
+                {user}
             </div>
-        ))}
+            <div className="tweet-card-date">
+                {new Date(date).toLocaleString()}
+            </div>
+            <div className="tweet-card-tweet">
+                {tweet}
+            </div>
+            <div>
+                {imageUrl && <img src={imageUrl} alt="tweet media" className='card-image'/>}
+            </div>
+            <div className="card-read-more">
+                <a href={tweetLink}>View on Twitter</a>
+            </div>
         </div>
     );
-}
+};
 
 export default Card;

@@ -1,12 +1,13 @@
 import "./home.css"
 import HeroBanner from "../components/heroBanner";
-import Card from "../components/cards";
+import TweetList from "../components/tweetList";
+import tweetsData from '../tweets/tweets.json';
 
 const Home = () => {
     return (
         <div className="">
            <HeroBanner />
-            <Card />
+            <TweetList tweets={tweetsData}/>
         </div>
     );
 }
