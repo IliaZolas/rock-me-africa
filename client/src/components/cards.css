@@ -2,11 +2,13 @@
     position: relative;
     color: white;
     border-radius:  5px;
-    background-color: #1b1d1d;
-    height: 300px;
-    max-width: 70%;
+    background-color: #1E1F21;
+    border: 1px solid #2bfffb75;
+    height: 250px;
+    width: 800px;
     margin: 40px;
-    padding: 20px;
+    display: flex;
+    overflow: hidden;
 }
 
 .card-title {
@@ -19,6 +21,37 @@
     right: 40px;
 }
 
+.card-read-more a {
+    color: #2BFFFA;
+    text-decoration: none;
+    border: 1px solid #2BFFFA;
+    padding: 10px;
+    border-radius: 10px;;
+}
+
+.card-image-container {
+    min-width: 250px;
+    overflow: hidden;
+}
+
 .card-image {
-    width: 200px;
+    width: 500px;
+    margin-left: -120px;
+}
+
+.tweet-list-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-handle, .tweet-card-date {
+    color:#2BFFFA;
+    font-size: 12px;
+    padding: 5px 0 5px 0;
+}
+
+.card-content {
+    padding: 20px;
 }
