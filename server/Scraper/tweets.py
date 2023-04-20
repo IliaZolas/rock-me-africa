@@ -5,8 +5,14 @@ import boto3
 import datetime
 import os
 
-# List of Twitter accounts to query
-accounts = ["WeBeFTG", "BlackCatBonesSA","RedHelenBand","DirtyMoonshine"]
+
+# list of 50 bands suggested by GPT
+# accounts = ['VulvodyniaMetal', 'DispleasedDisf', 'BoargazmBand', 'Desolationbandza', 'KrankdUpBand', 'SpectralRealm', 'thefossilhunter', 'V0IDSA', 'PolarDawnSA', 'deadnebula', 'stasisbandza', 'LastOneAliveZA', 'zombiesatemygf', 'RedHelenBand', 'bleedingspawn', 'madgodza', 'PosthumousZA', 'craving_aurora', 'Terminatryx', 'Nethercyst', 'thehellcatsza', 'atlantisbandza', 'WRUSTSA', 'RhakshahSA', 'TheDriftSA', 'OctainiumZA', 'state_dependency', 'FacingTheGallows', 'voiceofdestruction', 'The_Union_SA', 'junkyard_lipstick', 'soultoneSA', 'MyFlawlessEnding', 'ThreadOfOmen', 'TheatreRunRed', 'DemogorothSatanum', 'SikThCapeTown', 'Ohgodband', 'Riddlebreak', 'SacriFistSA', 'MaximumCarnage_', 'Surdusband', 'DeitysMuse', 'WrathRising', 'BleedingSpawn', 'TaunusheimSA', 'CrowBlackSky', 'nebuladisrupt', 'KHWASA', 'Ashurum']
+# accounts = ["seether", "mindassault", "Junkyardlipstick", "TheBlackCatBones", "Deadlineband1", "FacingTheGallows", "aandklas_pta", "KobusDeKockJr", "PolarDustMusic", "deitysma", "dirty_moonshine", "shotgun_torii", "climatecontrol", "ReverseTheSands", "StateDeceiver", "TheDriftSA", "TheFakeLeatherCoats", "DevilSpeak", "terminatryx", "adorned_za", "Octainiumband", "Ruff_Majik", "TheBarStoolPreachersZA", "ForsakingFate", "Bulletscript", "choking","SurdusBand", "redhelenband", "The_Heresy_SA", "theoutlaworchestra", "AmberLightChoices", "tokyolucyband", "climatecontro1", "Climate_Control", "desolation_band", "sonofhawkband", "KingOfTheHillZA", "CautionBoyBand", "Geraas_Platform", "The_Touch_SA", "TerminXband",  "CrimsonHouseSA", "OneDaySkyBand", "TurbineZA", "SubMissionSA", "Black_Pistol", "meltdowners", "thefabledring", "RiddlebreakBand", "reveryza", "nuff_saidza"]
+
+
+# List of Twitter accounts to query which are correct
+accounts = ["WeBeFTG", "BlackCatBonesSA","RedHelenBand","DirtyMoonshine", "VulvodyniaSlam", "OneDaySky", "SDOrgyMusic", "ccband", "Riddlebreak"]
 
 # Query parameters
 most_recent_date = datetime.datetime.now().strftime('%Y-%m-%d')
